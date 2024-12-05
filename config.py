@@ -1,6 +1,6 @@
 # Paths
 DATA_PATH = "data/syntheses_10.csv"  # Path to the dataset
-MODEL_PATH = "/media/somu/D/dataset/llama-2-pytorch-7b-chat-hf-v1"  # Path to the base model
+MODEL_PATH = "NousResearch/Llama-2-7b-chat-hf"#"/media/somu/D/dataset/llama-2-pytorch-7b-chat-hf-v1"  # Path to the base model
 FINETUNED_MODEL_PATH = "data/model/Fine_Tuned_LLaMA2"  # Path to the fine-tuned model output
 
 # Split parameters for dataset

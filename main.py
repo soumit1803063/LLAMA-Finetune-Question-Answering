@@ -107,5 +107,8 @@ evaluation_result_dataframe = evaluation_pipeline(
     generated_answers=generated_answers
 )
 
+for index, row in evaluation_result_dataframe.iterrows():
+    print(f"Cosine similarity = {row.iloc[-1]}")
 # --- Final Status ---
+
 print("Done")
