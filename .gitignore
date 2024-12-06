@@ -58,6 +58,7 @@ Thumbs.db
 # Custom exclusion
 !data/model/Fine_Tuned_LLaMA2
 data/model/*
+data/DB/*
 
 # Ignore IDE settings
 .idea/
