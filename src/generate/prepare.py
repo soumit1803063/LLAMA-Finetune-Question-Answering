@@ -6,8 +6,12 @@ def extract_answer(generated_text):
     return answer    
 
 
-def generate(prompt,model,tokenizer,max_new_tokens: int = 100):
-    inputs = tokenizer(prompt, return_tensors="pt")
+def generate(prompt, model, tokenizer, max_new_tokens: int = 100, device="cuda"):
+    # Move model to the correct device
+    model = model.to(device)
+    
+    # Tokenize the input and move to the same device as the model
+    inputs = tokenizer(prompt, return_tensors="pt").to(device)
 
     # Generate response
     output = model.generate(input_ids=inputs["input_ids"], max_new_tokens=max_new_tokens)
